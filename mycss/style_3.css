@@ -1,0 +1,32 @@
+.title {
+    color: white;
+    background-color: gray;
+    padding: 6px;
+}
+
+p {
+    display: inline;
+    padding-right: 6px;
+}
+
+br {
+    clear: both;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+    float: left;
+    height: 60px;
+    background-color: rgb(175, 179, 182);
+    margin: 0px;
+    margin-bottom: 1px;
+    padding: 10px;
+}
+
+#inf-1, #inf-2, #com-1, #com-2, #com-3 {
+    float: left;
+    height: 60px;
+    padding-left: 6px;
+    padding-top: 6px;
+}

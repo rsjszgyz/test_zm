@@ -1,0 +1,37 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+.container {
+    overflow: hidden;
+}
+
+.info p {
+    display: inline;
+    padding-right: 26px;
+}
+
+.title {
+    width: 15%;
+    float: left;
+    padding-top: 30px;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+    background-color: rgb(32, 144, 178);
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+#mypage {
+    width: 82%;
+    float: right;
+    padding-left: 3%;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}
