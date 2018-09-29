@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        table {
+            border: 1px solid orange;
+        }
+
+        #chart {
+            display: flex;
+        }
+
+        #bar-wrapper {
+            flex: 1;
+        }
+
+        #line-wrapper {
+            flex: 1;
+        }
+
+        td {
+            width: 65px;
+        }
+
+        button {
+            display: none;
+            font-size: 10px;
+            padding: 1px;
+        }
+
+        input[type=text] {
+            width: 60px;
+        }
+
+        .active {
+            display: inline;
+        }
+
+        .inactive {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="region-radio-wrapper">
+        <input type="checkbox" name="region" value="全选" checkbox-type="all">全选
+        <input type="checkbox" name="region" value="华东" checkbox-type="single">华东
+        <input type="checkbox" name="region" value="华南" checkbox-type="single">华南
+        <input type="checkbox" name="region" value="华北" checkbox-type="single">华北
+    </div>
+    <div id="product-radio-wrapper">
+        <input type="checkbox" name="product" value="全选" checkbox-type="all">全选
+        <input type="checkbox" name="product" value="手机" checkbox-type="single">手机
+        <input type="checkbox" name="product" value="笔记本" checkbox-type="single">笔记本
+        <input type="checkbox" name="product" value="智能音箱" checkbox-type="single">智能音箱
+    </div>
+
+    <div id="chart">
+
+        <div id="bar-wrapper">
+            <svg id="bar" width="700" height="300" xmlns="http://www.w3.org/2000/svg" version="1.1"></svg>
+        </div>
+
+        <div id="line-wrapper">
+            <canvas id="canvas" width="700" height="300"></canvas>
+        </div>
+
+    </div>
+
+    <div id="table-wrapper">
+        <table id="table" border="1"></table>
+    </div>
+
+</body>
+
+<script type="text/javascript" src="js/task_37_checkbox.js"></script>
+<script type="text/javascript" src="js/task_37_table.js"></script>
+<script type="text/javascript" src="js/task_37_app.js"></script>
+<script type="text/javascript" src="js/task_37_bar.js"></script>
+<script type="text/javascript" src="js/task_37_line.js"></script>
+
+</html>
