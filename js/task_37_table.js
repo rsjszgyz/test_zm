@@ -58,9 +58,14 @@ table.addEventListener("click", function (ev) {
             child[4].classList.remove("active");
             child[0].innerHTML = newValue;
 
-            localStorage.clear();
+
             var newData = [];
-            newData = objDeepCopy(sourceData);
+            if (localStorage.getItem("newData")) {
+                newData = JSON.parse(localStorage.getItem("newData"));
+            } else {
+                newData = objDeepCopy(sourceData);
+            }
+
             var index = child[2].dataset.index;
             var region = target.parentNode.dataset.region;
             var product = target.parentNode.dataset.product;
@@ -114,9 +119,14 @@ table.addEventListener("keydown", function (ev) {
                     child[4].classList.remove("active");
                     child[0].innerHTML = newValue;
 
-                    localStorage.clear();
+
                     var newData = [];
-                    newData = objDeepCopy(sourceData);
+                    if (localStorage.getItem("newData")) {
+                        newData = JSON.parse(localStorage.getItem("newData"));
+                    } else {
+                        newData = objDeepCopy(sourceData);
+                    }
+
                     var index = child[2].dataset.index;
                     var region = target.parentNode.dataset.region;
                     var product = target.parentNode.dataset.product;
