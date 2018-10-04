@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+</body>
+
+<script src="js/restaurant.js"></script>
+<script src="js/staff.js"></script>
+<script src="js/dish.js"></script>
+<script src="js/customer.js"></script>
+
+<script>
+    var ifeRestaurant = new Restaurant({
+        cash: 1000000,
+        seats: 20,
+        staff: []
+    });
+
+    var newCook = new Cook("Tony", 10000);
+    ifeRestaurant.hire(newCook);
+
+    console.log(ifeRestaurant.staff);
+
+    ifeRestaurant.fire(newCook);
+    console.log(ifeRestaurant.staff);
+</script>
+
+</html>
