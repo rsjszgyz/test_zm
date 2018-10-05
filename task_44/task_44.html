@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+</body>
+
+<script src="js/restaurant.js"></script>
+<script src="js/staff.js"></script>
+<script src="js/dish.js"></script>
+<script src="js/customer.js"></script>
+
+<script>
+    let ifeRestaurant = new Restaurant({
+        cash: 1000000,
+        seats: 20,
+        staff: []
+    });
+
+    let newCook = Cook.getInstance("Tony", 10000);
+    ifeRestaurant.hire(newCook);
+    let newWaiter = Waiter.getInstance("Mary", 6000);
+    ifeRestaurant.hire(newWaiter);
+
+    let dishList = [];
+    dishList.push(new Dish("地三鲜", 10, 20));
+    dishList.push(new Dish("宫保鸡丁", 20, 30));
+    dishList.push(new Dish("麻辣香锅", 30, 40));
+
+    let customers = [];
+    let customer1 = new Customer();
+    let customer2 = new Customer();
+    customers.push(customer1);
+    customers.push(customer2);
+
+    for (let i = 0; i < customers.length; i++) {
+        let orderDish = customers[i].order(dishList);
+        customers[i].callWaiter(orderDish);
+        newWaiter.callCook(orderDish);
+        newCook.callWaiter(orderDish);
+        customers[i].eat(orderDish);
+    }
+
+</script>
+
+</html>
