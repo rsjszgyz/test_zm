@@ -1,0 +1,142 @@
+.waiting {
+    float: left;
+    position: relative;
+}
+
+.customerMove {
+    position: absolute;
+    animation: cusMove 1s forwards;
+    -webkit-animation: cusMove 1s forwards; /* Safari and Chrome */
+}
+
+@keyframes cusMove
+{
+    0%   {top: 0; left: 0;}
+    50%  {top: 0; left: 500px;}
+    100% {top: 250px; left: 500px;}
+}
+
+@-webkit-keyframes cusMove /* Safari and Chrome */
+{
+    0%   {top: 0; left: 0;}
+    50%  {top: 0; left: 500px;}
+    100% {top: 250px; left: 500px;}
+}
+
+.waiterMove {
+    animation: waiMove 1s forwards;
+    -webkit-animation: waiMove 1s forwards;
+}
+
+@keyframes waiMove
+{
+    0%   {top: 0; right: 200px;}
+    50%  {top: 0; right: 500px;}
+    100% {top: 250px; right: 500px;}
+}
+
+@-webkit-keyframes waiMove
+{
+    0%   {top: 0; right: 200px;}
+    50%  {top: 0; right: 500px;}
+    100% {top: 250px; right: 500px;}
+}
+
+.toCookMove {
+    animation: toCookMv 0.5s forwards;
+    -webkit-animation: toCookMv 0.5s forwards;
+}
+
+@keyframes toCookMv
+{
+    0%   {top: 250px; right: 500px;}
+    100% {top: 250px; right: 200px;}
+}
+
+@-webkit-keyframes toCookMv
+{
+    0%   {top: 250px; right: 500px;}
+    100% {top: 250px; right: 200px;}
+}
+
+.toCustomerMove {
+    animation: toCustomerMv 0.5s forwards;
+    -webkit-animation: toCustomerMv 0.5s forwards;
+}
+
+@keyframes toCustomerMv
+{
+    0%   {top: 250px; right: 200px;}
+    100% {top: 250px; right: 500px;}
+}
+
+@-webkit-keyframes toCustomerMv
+{
+    0%   {top: 250px; right: 200px;}
+    100% {top: 250px; right: 500px;}
+}
+
+.waiterBack {
+    animation: waiterBackMv 0.5s forwards;
+    -webkit-animation: waiterBackMv 0.5s forwards;
+}
+
+@keyframes waiterBackMv
+{
+    0%   {top: 250px; right: 500px;}
+    50%  {top: 0; right: 500px;}
+    100% {top: 0; right: 200px;}
+}
+
+@-webkit-keyframes waiterBackMv
+{
+    0%   {top: 250px; right: 500px;}
+    50%  {top: 0; right: 500px;}
+    100% {top: 0; right: 200px;}
+}
+
+.restaurant {
+    position: relative;
+}
+
+.waiter {
+    position: absolute;
+    top: 0;
+    right: 200px;
+}
+
+.counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cash {
+    position: absolute;
+    top: 120px;
+    right: 0;
+}
+
+.order {
+    position: absolute;
+    right: 620px;
+    top: 400px;
+}
+
+.seat {
+    position: absolute;
+    top: 250px;
+    right: 620px;
+}
+
+.state {
+    position: absolute;
+    top: 400px;
+    right: 0;
+}
+
+.cook {
+    position: absolute;
+    top: 250px;
+    right: 0;
+}
