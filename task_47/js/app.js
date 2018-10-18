@@ -109,26 +109,20 @@ function loopCustomer(num) {
                         cash.innerHTML = "现金数量：" + ifeRestaurant.cash;
 
                         setTimeout(function () {
+                            orderContent.innerHTML = "空闲";
+                            stateContent.innerHTML = "空闲";
+                            waiter.classList.add("waiterBack");
+                            customer.style.display = "none";
 
                             //服务下一个顾客
                             num++;
 
                             if (num < customers.length) {
-                                orderContent.innerHTML = "空闲";
-                                stateContent.innerHTML = "空闲";
-                                waiter.classList.add("waiterBack");
-                                customer.style.display = "none";
                                 setTimeout(function () {
                                     loopCustomer(num);
                                 }, 1000);
                             }
 
-                            if (num == customers.length) {
-                                orderContent.innerHTML = "空闲";
-                                stateContent.innerHTML = "空闲";
-                                waiter.classList.add("waiterBack");
-                                customer.style.display = "none";
-                            }
                         }, 500);
                     }
                 });
